@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\FamilyAccountant.Application\FamilyAccountant.Application.csproj" />
+      <ProjectReference Include="..\FamilyAccountant.Domain\FamilyAccountant.Domain.csproj" />
+      <ProjectReference Include="..\FamilyAccountant.Infrastructure.Migrations\FamilyAccountant.Infrastructure.Migrations.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Dapper" Version="2.1.66" />
+      <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.0" />
+      <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.1.2" />
+      <PackageReference Include="NLog.Targets.Seq" Version="4.0.2-dev-00175" />
+      <PackageReference Include="NLog.Web.AspNetCore" Version="5.4.0" />
+      <PackageReference Include="Npgsql" Version="9.0.2" />
+    </ItemGroup>
+
+</Project>

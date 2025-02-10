@@ -1,0 +1,46 @@
+version: "3.9"
+services:
+  family-accountant:
+    image: family-accountant
+    build:
+      context: .
+      dockerfile: src/FamilyAccountant.WebApi/Dockerfile
+    ports:
+      - "5010:8080"
+    networks:
+      - family-accountant-network
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: "api_db"
+      POSTGRES_USER: "api_user"
+      POSTGRES_PASSWORD: "p@55w0rD"
+      PGDATA: "/var/lib/postgresql/data/pgdata"
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+    networks:
+      - family-accountant-network
+    ports:
+      - "5110:5432"
+
+  seq:
+    image: datalust/seq:latest
+    container_name: seq
+    ports:
+      - "5210:80"
+    volumes:
+      - seq-data:/data
+    environment:
+      - ACCEPT_EULA=Y
+    networks:
+      - family-accountant-network
+
+volumes:
+  pg-data:
+  seq-data:
+
+networks:
+  family-accountant-network:

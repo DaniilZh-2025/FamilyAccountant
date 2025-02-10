@@ -1,0 +1,71 @@
+﻿# Ignore build artifacts
+bin/
+obj/
+
+# Ignore local development files
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.userprefs
+*.userosscache
+*.sln.docstates
+
+# Ignore NuGet packages and restore files
+.nuget/
+packages/
+*.nupkg
+nuget.exe
+
+# Ignore local development settings
+appsettings.Development.json
+appsettings.Local.json
+
+# Ignore logs and diagnostics
+logs/
+*.log
+*.log.*
+*.trx
+
+# Ignore Rider/ReSharper files
+_ReSharper.*
+*.sln.iml
+
+# Ignore Docker files
+docker-compose.override.yml
+docker-compose.vs.debug.yml
+docker-compose.vs.release.yml
+
+# Ignore Node.js and frontend build artifacts
+node_modules/
+dist/
+wwwroot/lib/
+
+# Ignore Azure Functions artifacts
+func/
+func.exe
+
+# Ignore Visual Studio cache/options directory
+.vs/
+
+# Ignore Rider/ReSharper files
+.idea/
+
+# Ignore macOS files
+.DS_Store
+
+# Ignore test results
+TestResults/
+
+# Ignore coverage reports
+coverage/
+*.coverage
+*.coveragexml
+
+# Ignore JetBrains Rider files
+*.sln.iml
+*.DotSettings
+
+# Ignore local secrets
+secrets.json
